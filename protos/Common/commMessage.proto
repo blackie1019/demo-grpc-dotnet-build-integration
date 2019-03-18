@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package Demo.Common; //will be placed in a namespace matching the package name if csharp_namespace is not specified
+option csharp_namespace = "Demo.Common";
+
+enum TestEnum{
+    star =0;
+    moon =1;
+    sun =2;
+}
+
+message TestMsg{
+    TestEnum Data = 1;
+}

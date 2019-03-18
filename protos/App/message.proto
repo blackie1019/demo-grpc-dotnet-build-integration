@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package Demo.App.Message; //will be placed in a namespace matching the package name if csharp_namespace is not specified
+option csharp_namespace = "Demo.App.Message";
+
+message GreetingMsg {
+  string Value =1;
+}
+
+message GreetingResponse{
+  string MsgValue =1;
+  string ReturnValue =2;
+}
+
+message TestResponse {
+  repeated string Values =1;
+}

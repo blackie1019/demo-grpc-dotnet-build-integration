@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package Demo.App.Message; //will be placed in a namespace matching the package name if csharp_namespace is not specified
+option csharp_namespace = "Demo.App.Message";
+import "App/message.proto";
+import "Common/commMessage.proto";
+
+service DemoService {
+  rpc Say(GreetingMsg) returns (GreetingResponse);
+  rpc TestWithTestMsg(Demo.Common.TestMsg) returns (TestResponse);
+}
